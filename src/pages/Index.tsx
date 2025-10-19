@@ -1,13 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Services from "@/components/Services";
+import Gallery from "@/components/Gallery";
+import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="min-h-screen">
+      <Hero />
+      <About />
+      <Services />
+      <Gallery />
+      <Contact />
+      
+      <footer className="gradient-hero text-white py-8 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-gold font-display text-2xl mb-2">Vighnaharta</p>
+          <p className="text-white/90 mb-4">Event & Wedding Planner</p>
+          <p className="text-sm text-white/70">
+            © 2025 Vighnaharta Event & Wedding Planner. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </main>
   );
 };
 
