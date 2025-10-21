@@ -9,8 +9,9 @@ export default function About() {
             About Us
           </h2>
           <div className="w-24 h-1 gradient-gold mx-auto mb-6"></div>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            <span className="text-primary font-semibold">Vighnaharta Event & Wedding Planner</span> — your trusted experts for all occasions. 
+          <span className="text-primary font-semibold">Vighnaharta Event & Wedding Planner</span>
+          <p className="text-l text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              your trusted experts for all occasions. 
             We are passionate professional planners dedicated to making every celebration extraordinary.
           </p>
         </div>
