@@ -5,9 +5,9 @@ import gallery4 from "@/assets/gallery-4.jpg";
 
 const galleryImages = [
   { src: gallery1, alt: "Traditional wedding ceremony" },
-  { src: gallery2, alt: "First dance at reception" },
-  { src: gallery3, alt: "Stunning stage decoration" },
-  { src: gallery4, alt: "Outdoor evening celebration" },
+  { src: gallery2, alt: "Dancing in joy" },
+  { src: gallery3, alt: "love through eyes" },
+  { src: gallery4, alt: "Traditianol Outfit photography" },
 ];
 
 export default function Gallery() {

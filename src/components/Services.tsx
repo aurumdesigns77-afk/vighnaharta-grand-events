@@ -1,19 +1,25 @@
-import venueImg from "@/assets/service-venue.jpg";
+import { Link } from "react-router-dom";
+
 import decorationImg from "@/assets/service-decoration.jpg";
 import cateringImg from "@/assets/service-catering.jpg";
 import photographyImg from "@/assets/service-photography.jpg";
 import djImg from "@/assets/service-dj.jpg";
 import makeupImg from "@/assets/service-makeup.jpg";
 import mehandiImg from "@/assets/service-mehandi.jpg";
+import eng from "@/assets/engagment.jpg";
+import bday from "@/assets/birthday.jpg";
+
 
 const services = [
-  { title: "Venue", image: venueImg, description: "Perfect locations for your special day" },
-  { title: "Decoration", image: decorationImg, description: "Exquisite floral & lighting designs" },
-  { title: "Catering", image: cateringImg, description: "Delicious cuisine for your guests" },
-  { title: "Photography", image: photographyImg, description: "Capturing your precious moments" },
-  { title: "DJ Music", image: djImg, description: "Entertainment that keeps spirits high" },
-  { title: "Makeup Artist", image: makeupImg, description: "Professional bridal & event makeup" },
-  { title: "Mehandi Artist", image: mehandiImg, description: "Traditional intricate henna designs" },
+  { id: "decoration", title: "Decoration", image: decorationImg, description: "Exquisite floral & lighting designs" },
+  { id: "catering", title: "Catering", image: cateringImg, description: "Delicious cuisine for your guests" },
+  { id: "photography", title: "Photography", image: photographyImg, description: "Capturing your precious moments" },
+  { id: "dj", title: "DJ Music", image: djImg, description: "Entertainment that keeps spirits high" },
+  { id: "makeup", title: "Makeup Artist", image: makeupImg, description: "Professional bridal & event makeup" },
+  { id: "mehandi", title: "Mehandi Artist", image: mehandiImg, description: "Traditional intricate henna designs" },
+  { id: "birthday", title: "Birthday Party", image: bday, description: "Fun-filled themed celebrations" },
+{ id: "engagement", title: "Engagement Ceremony", image: eng, description: "Elegant decor & romantic moments" },
+
 ];
 
 export default function Services() {
@@ -31,9 +37,10 @@ export default function Services() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
+          {services.map((service) => (
+            <Link
+              key={service.id}
+              to={`/services/${service.id}`}
               className="group relative overflow-hidden rounded-lg shadow-elegant hover:shadow-gold transition-all duration-300 hover:-translate-y-2"
             >
               <div className="aspect-[4/3] overflow-hidden">
@@ -52,7 +59,7 @@ export default function Services() {
               <div className="absolute top-4 right-4 w-12 h-12 gradient-gold rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-gold">
                 <span className="text-2xl text-primary">✓</span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -4,7 +4,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png";
+
 
 const slides = [
   { image: hero1, alt: "Luxurious wedding venue decoration" },
@@ -85,7 +86,7 @@ export default function Hero() {
           alt="Vighnaharta Event & Wedding Planner Logo" 
           className="w-32 h-32 mb-6 animate-fade-in"
         />
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-fade-in">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold  font-playfair text-white mb-4 animate-fade-in">
           Vighnaharta
         </h1>
         <p className="text-2xl md:text-3xl text-gold mb-2 animate-fade-in font-display">
