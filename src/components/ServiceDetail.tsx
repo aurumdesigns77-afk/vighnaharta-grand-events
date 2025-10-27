@@ -28,8 +28,110 @@ import wed8 from "@/assets/wedding8.jpg";
 import wed9 from "@/assets/wedding9.jpg";
 import eng from "@/assets/engagment.jpg";
 import bday from "@/assets/birthday.jpg";
+import deco1 from "@/assets/deco 1.jpg";
+import deco2 from "@/assets/deco 2.jpg";
+import deco3 from "@/assets/deco 3.jpg";
+import deco4 from "@/assets/deco 4.jpg";
+
+import catering1 from "@/assets/catering (1).jpg";
+import catering2 from "@/assets/catering (2).jpg";
+import catering3 from "@/assets/catering (3).jpg";
+import catering4 from "@/assets/catering (4).jpg";
+import dj1 from "@/assets/DJ (1).jpg";
+import dj2 from "@/assets/DJ (2).jpg";
+import dj3 from "@/assets/DJ (3).jpg";
+import dj4 from "@/assets/DJ (4).jpg";
+import bday1 from "@/assets/bday (1).jpg";
+import bday2 from "@/assets/bday (2).jpg";
+import bday3 from "@/assets/bday (3).jpg";
+import bday4 from "@/assets/bday (4).jpg";
+import makeup1 from "@/assets/makeup (1).jpg";
+import makeup2 from "@/assets/makeup (2).jpg";
+import makeup3 from "@/assets/makeup (3).jpg";
+import makeup4 from "@/assets/makeup (4).jpg";
+import mehendi1 from "@/assets/mehendi (1).jpg";
+import mehendi2 from "@/assets/mehendi (2).jpg";
+import mehendi3 from "@/assets/mehendi (3).jpg";
+import mehendi4 from "@/assets/mehendi (4).jpg";
+import eng1 from "@/assets/eng (1).jpg";
+import eng2 from "@/assets/eng (2).jpg";
+import eng3 from "@/assets/eng (3).jpg";
+import eng4 from "@/assets/eng (4).jpg";
 
 
+// ✅ Define helper component before using it
+function ImageGallery({
+  title,
+  images,
+}: {
+  title: string;
+  images: string[];
+}) {
+  return (
+    <div className="mb-10 p-6 bg-white shadow-md rounded-2xl">
+      <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
+        {title}
+      </h2>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
+        {images.map((img, idx) => (
+          <div
+            key={idx}
+            className="overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-all duration-300"
+          >
+            <img
+              src={img}
+              alt={`${title} ${idx + 1}`}
+              loading="lazy"
+              className="object-cover w-full h-48 sm:h-56 md:h-64 transform hover:scale-110 transition-transform duration-500 ease-in-out"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+const decorationImages = [deco1, deco2, deco3, deco4];
+const cateringImages = [
+  catering1,
+  catering2,
+  catering3,
+  catering4
+];
+const djImages = [
+  dj1,
+  dj2,
+  dj3,
+  dj4
+];
+const engImage = [
+  eng1,
+  eng2,
+  eng3,
+  eng4
+]
+
+const makeupImage = [
+  makeup1,
+  makeup2,
+  makeup3,
+  makeup4
+];
+
+const mehendiImage = [
+  mehendi1,
+  mehendi2,
+  mehendi3,
+  mehendi4
+];
+
+const bdayImg = [
+  bday1,
+  bday2,
+  bday3,
+  bday4
+]
 const preWeddingImages = [
   pre1,
   pre2,
@@ -52,19 +154,18 @@ const serviceDetails: Record<
 > = {
   decoration: {
     title: "Decoration",
-    description: "Transform your event space beautifully.",
+    description: "Transform your venue with stunning decor.",
     image: decorationImg,
     content: (
-      <p className="text-lg">
-        Transform your event into a magical experience with our expert
-        decoration services. Our decorators specialize in creating stunning
-        visual themes — from traditional floral arrangements and royal mandaps
-        to contemporary minimal setups and luxurious draping styles. We tailor
-        every design element to your color palette, theme, and budget, ensuring
-        every corner reflects your personality and story. Lighting, stage
-        design, table settings, and floral installations come together to make
-        your event a visual masterpiece that guests will talk about for years.
-      </p>
+      <div>
+        <p className="text-lg mb-4">
+          Our decoration services bring your dream theme to life — from elegant
+          floral arrangements to luxurious stage designs and ambient lighting.
+          We tailor every detail to your vision, ensuring your event feels truly
+          magical.
+        </p>
+        <ImageGallery title="Decoration Gallery" images={decorationImages} />
+      </div>
     ),
   },
   catering: {
@@ -72,6 +173,7 @@ const serviceDetails: Record<
     description: "Delicious menus tailored for your event.",
     image: cateringImg,
     content: (
+      <div>
       <p className="text-lg">
         Great food makes great memories! Our catering services offer an
         extensive range of cuisines — Indian, Continental, Asian, and more —
@@ -82,65 +184,35 @@ const serviceDetails: Record<
         beautifully presented desserts, every dish is crafted to impress and
         delight your guests.
       </p>
+
+      <ImageGallery title="Catering Showcase" images={cateringImages} />
+      </div>
+
     ),
   },
-  photography: {
+ photography: {
   title: "Photography",
   description: "Capture every beautiful moment.",
   image: photographyImg,
-  content: (() => {
-    return (
-      <div className="relative">
-        <p className="text-lg mb-4">
-          Every moment deserves to be remembered — and our photography and
-          cinematography teams ensure no emotion is missed. From candid
-          pre-wedding laughter to grand stage moments, our photographers capture
-          memories that last a lifetime. We offer high-end equipment, drone
-          shots, cinematic video editing, and custom albums. Whether you prefer
-          a natural storytelling approach or glamorous portraits, our creative
-          direction ensures every frame tells your story beautifully.
-        </p>
+  content: (
+    <div className="relative">
+      <p className="text-lg mb-4">
+        Every moment deserves to be remembered — and our photography and
+        cinematography teams ensure no emotion is missed. From candid
+        pre-wedding laughter to grand stage moments, our photographers capture
+        memories that last a lifetime. We offer high-end equipment, drone
+        shots, cinematic video editing, and custom albums. Whether you prefer
+        a natural storytelling approach or glamorous portraits, our creative
+        direction ensures every frame tells your story beautifully.
+      </p>
 
-        {/* Pre-Wedding Card */}
-        <div className="mb-10 p-6 bg-white shadow-md rounded-lg">
-          <h2 className="text-2xl font-semibold mb-4">Pre-Wedding Shoots</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {preWeddingImages.map((img, idx) => (
-              <div
-                key={`pre-${idx}`}
-                className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src={img}
-                  alt={`Pre-Wedding ${idx}`}
-                  className="object-cover h-80 w-full transform hover:scale-110 transition-all duration-500"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Pre-Wedding Gallery */}
+      <ImageGallery title="Pre-Wedding Showcase" images={preWeddingImages} />
 
-        {/* Wedding Card */}
-        <div className="p-6 bg-white shadow-md rounded-lg">
-          <h2 className="text-2xl font-semibold mb-4">Wedding Moments</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {weddingImages.map((img, idx) => (
-              <div
-                key={`wed-${idx}`}
-                className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src={img}
-                  alt={`Wedding ${idx}`}
-                  className="object-cover h-80 w-full transform hover:scale-110 transition-all duration-500"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  })(),
+      {/* Wedding Gallery */}
+      <ImageGallery title="Wedding Showcase" images={weddingImages} />
+    </div>
+  ),
 },
 
 
@@ -149,6 +221,7 @@ const serviceDetails: Record<
     description: "Get the party started!",
     image: djImg,
     content: (
+      <div>
       <p className="text-lg">
         Turn up the energy and let the beats move your crowd! Our professional
         DJs know exactly how to read the room and keep your guests dancing all
@@ -158,6 +231,8 @@ const serviceDetails: Record<
         effects for a truly immersive experience. You bring the crowd — we’ll
         bring the rhythm and unforgettable fun.
       </p>
+      <ImageGallery title="dj Showcase" images={djImages} />
+      </div>
     ),
   },
   makeup: {
@@ -176,6 +251,7 @@ const serviceDetails: Record<
           personality. We also offer hair styling, draping, and pre-event skin
           consultations for a truly complete beauty experience.
         </p>
+        <ImageGallery title="makeup Showcase" images={makeupImage} />
       </div>
     ),
   },
@@ -184,12 +260,15 @@ const serviceDetails: Record<
   description: "Celebrate the beginning of forever in style.",
   image: eng,
   content: (
+    <div>
     <p className="text-lg">
       From ring exchange rituals to romantic decor, we make your engagement 
       a beautiful celebration filled with elegance and joy. Whether you prefer 
       a royal setup or a cozy, intimate event, we handle decor, lighting, 
       photography, and entertainment — so you can simply enjoy your special moment.
     </p>
+    <ImageGallery title="eng Showcase" images={engImage} />
+    </div>
   ),
 },
 
@@ -198,12 +277,15 @@ birthday: {
   description: "Make every birthday unforgettable.",
   image: bday,
   content: (
+    <div>
     <p className="text-lg">
       Whether it's a fun kids' party, a classy 18th bash, or a grand milestone 
       celebration — we bring your vision to life! With themed decorations, 
       entertainers, custom cakes, and music, we ensure joy and excitement 
       from start to finish.
     </p>
+    <ImageGallery title="bday showing" images={bdayImg} />
+    </div>
   ),
 },
 
@@ -213,6 +295,7 @@ birthday: {
     description: "Traditional artistry for your celebration.",
     image: mehandiImg,
     content: (
+      <div>
       <p className="text-lg">
         Celebrate tradition and beauty with our talented mehndi artists, who
         specialize in intricate and creative designs for all occasions. Whether
@@ -223,6 +306,8 @@ birthday: {
         skin. Let your hands and feet tell your story — beautifully,
         artistically, and full of joy.
       </p>
+      <ImageGallery title="mehendi Showcase" images={mehendiImage} />
+      </div>
     ),
   },
 };
