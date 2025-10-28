@@ -28,10 +28,14 @@ import wed8 from "@/assets/wedding8.jpg";
 import wed9 from "@/assets/wedding9.jpg";
 import eng from "@/assets/engagment.jpg";
 import bday from "@/assets/birthday.jpg";
-import deco1 from "@/assets/deco 1.jpg";
-import deco2 from "@/assets/deco 2.jpg";
-import deco3 from "@/assets/deco 3.jpg";
-import deco4 from "@/assets/deco 4.jpg";
+import deco1 from "@/assets/deco (1).jpg";
+import deco2 from "@/assets/deco (2).jpg";
+import deco3 from "@/assets/deco (3).jpg";
+import deco4 from "@/assets/deco (4).jpg";
+import deco5 from "@/assets/deco (5).jpg";
+import deco6 from "@/assets/deco (6).jpg";
+import deco7 from "@/assets/deco (7).jpg";
+import deco8 from "@/assets/deco (8).jpg";
 
 import catering1 from "@/assets/catering (1).jpg";
 import catering2 from "@/assets/catering (2).jpg";
@@ -45,6 +49,10 @@ import bday1 from "@/assets/bday (1).jpg";
 import bday2 from "@/assets/bday (2).jpg";
 import bday3 from "@/assets/bday (3).jpg";
 import bday4 from "@/assets/bday (4).jpg";
+import bday5 from "@/assets/bday (5).jpg";
+import bday6 from "@/assets/bday (6).jpg";
+import bday7 from "@/assets/bday (7).jpg";
+import bday8 from "@/assets/bday (8).jpg";
 import makeup1 from "@/assets/makeup (1).jpg";
 import makeup2 from "@/assets/makeup (2).jpg";
 import makeup3 from "@/assets/makeup (3).jpg";
@@ -59,7 +67,7 @@ import eng3 from "@/assets/eng (3).jpg";
 import eng4 from "@/assets/eng (4).jpg";
 
 
-// ✅ Define helper component before using it
+
 function ImageGallery({
   title,
   images,
@@ -92,7 +100,7 @@ function ImageGallery({
   );
 }
 
-const decorationImages = [deco1, deco2, deco3, deco4];
+const decorationImages = [deco1, deco2, deco3, deco4,deco5,deco6,deco7,deco8];
 const cateringImages = [
   catering1,
   catering2,
@@ -130,7 +138,11 @@ const bdayImg = [
   bday1,
   bday2,
   bday3,
-  bday4
+  bday4,
+  bday5,
+  bday6,
+  bday7,
+  bday8
 ]
 const preWeddingImages = [
   pre1,
